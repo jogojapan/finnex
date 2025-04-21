@@ -6,6 +6,8 @@ __pycache__/
 # C extensions
 *.so
 
+finnexenv
+
 # Distribution / packaging
 .Python
 build/
@@ -60,6 +62,10 @@ cover/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+
+# Static and media files
+/static/
+/media/
 
 # Flask stuff:
 instance/
@@ -135,6 +141,18 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.secret_key
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+Thumbs.db
 
 # Spyder project settings
 .spyderproject
@@ -172,3 +190,30 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Dependency directories
+node_modules/
+
+# Compiled files
+*.pyc
+*.pyo
+*.pyd
+
+# Deployment and configuration
+*.sock
+*.pid
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Pytest
+.pytest_cache/
+
+# Coverage reports
+.coverage
+htmlcov/
+
+# Migrations (optional - depends on project workflow)
+# Uncomment if you don't want to track database migrations
+# */migrations/*.py
+# !*/migrations/__init__.py
