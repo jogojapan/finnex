@@ -20,7 +20,7 @@ Experimentation with personal-finances management software.
 
     ``` bash
     python -m venv myenv
-    source myenv/bin/activate  # On Windows use ```myenv\Scripts\activate```
+    source finnexenv/bin/activate  # On Windows use ```myenv\Scripts\activate```
     ```
 1. Install Python Dependencies:
 
