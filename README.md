@@ -22,6 +22,8 @@ Experimentation with personal-finances management software.
     python -m venv myenv
     source finnexenv/bin/activate  # On Windows use ```myenv\Scripts\activate```
     ```
+    
+    (You may later leave this environment by entering `deactivate`.)
 1. Install Python Dependencies:
 
     ``` bash
