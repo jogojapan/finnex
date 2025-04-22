@@ -1,6 +1,42 @@
 # finnex: Personal Finance Manager
 Experimentation with personal-finances management software.
 
+## Architecture (future; still working on it)
+
+``` mermaid
+%% Django-React-Nginx Architecture (Validated)
+graph TD
+    %% Entities
+    User[("User (Browser)")] -->|"HTTPS: domain.com"| Nginx
+    User -->|"HTTPS: api.domain.com"| Nginx
+
+    subgraph "Nginx (Reverse Proxy & Static Files)"
+        direction TB
+        Nginx["Nginx"] -->|"Serves static files"| React
+        Nginx -->|"Proxies to Gunicorn"| Django
+    end
+
+    subgraph "Frontend"
+        React["React App (Static Files)"]
+    end
+
+    subgraph "Backend"
+        Django[["Django (Gunicorn)"]] --> Database[("Database")]
+    end
+
+    %% Styling (no inline comments!)
+    class User user
+    class Nginx nginx
+    class React react
+    class Django django
+    class Database database
+    classDef user fill:#f0f0f0,stroke:#666,stroke-width:2px,color:#333
+    classDef nginx fill:#f0f8ff,stroke:#06c,stroke-width:2px,rx:8,ry:8
+    classDef react fill:#61dafb,stroke:#20232a,stroke-width:2px,rx:8,ry:8
+    classDef django fill:#092e20,stroke:#0c4b33,color:#fff,rx:8,ry:8
+    classDef database fill:#336791,stroke:#ddd,color:#fff,rx:8,ry:8
+```
+
 ## Setting Up the Development Environment
 
 ### Prerequisites
