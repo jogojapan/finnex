@@ -7,10 +7,10 @@ Experimentation with personal-finances management software.
 %% Django-React-Nginx Architecture (Validated)
 graph TD
     %% Entities
-    User[("User (Browser)")] -->|"HTTPS: domain.com"| Nginx
+    User[("User/Browser")] -->|"HTTPS: domain.com"| Nginx
     User -->|"HTTPS: api.domain.com"| Nginx
 
-    subgraph "Nginx (Reverse Proxy & Static Files)"
+    subgraph "Nginx"
         direction TB
         Nginx["Nginx"] -->|"Serves static files"| React
         Nginx -->|"Proxies to Gunicorn"| Django
