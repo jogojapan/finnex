@@ -21,7 +21,7 @@ graph TD
     end
 
     subgraph "Backend"
-        Django[["Django (Gunicorn)"]] --> Database[("Database")]
+        Django["Django (Gunicorn)"] --> Database[("Database")]
     end
 
     %% Styling (no inline comments!)
@@ -30,11 +30,11 @@ graph TD
     class React react
     class Django django
     class Database database
-    classDef user fill:#f0f0f0,stroke:#666,stroke-width:2px,color:#333
-    classDef nginx fill:#f0f8ff,stroke:#06c,stroke-width:2px,rx:8,ry:8
-    classDef react fill:#61dafb,stroke:#20232a,stroke-width:2px,rx:8,ry:8
-    classDef django fill:#092e20,stroke:#0c4b33,color:#fff,rx:8,ry:8
-    classDef database fill:#336791,stroke:#ddd,color:#fff,rx:8,ry:8
+    classDef user fill:#f0f0f0,stroke:#20232a,stroke-width:2px,color:#333
+    classDef nginx fill:#f0f8ff,stroke:#20232a,stroke-width:2px,color:#333,rx:8,ry:8
+    classDef react fill:#619a9b,stroke:#20232a,stroke-width:2px,color:#ccc,rx:8,ry:8
+    classDef django fill:#619a9b,stroke:#20232a,color:#ccc,rx:8,ry:8
+    classDef database fill:#336791,stroke:#20232a,color:#ccc,rx:8,ry:8
 ```
 
 ## Setting Up the Development Environment
