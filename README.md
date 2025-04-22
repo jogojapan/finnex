@@ -10,9 +10,9 @@ graph TD
     User[("User/Browser")] -->|"HTTPS: domain.com"| Nginx
     User -->|"HTTPS: api.domain.com"| Nginx
 
-    subgraph "Nginx"
+    subgraph "Webserver"
         direction TB
-        Nginx["Nginx"] -->|"Serves static files"| React
+        Nginx["nginx"] -->|"Serves static files"| React
         Nginx -->|"Proxies to Gunicorn"| Django
     end
 
