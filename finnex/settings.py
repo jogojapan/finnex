@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'rest_framework.authtoken',
+    'corsheaders',
 ]
 
 SITE_ID = 1
@@ -72,6 +73,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
@@ -138,6 +140,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3001',
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
