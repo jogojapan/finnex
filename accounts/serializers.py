@@ -12,9 +12,16 @@ class AccountSerializer(serializers.ModelSerializer):
             'account_id',
             'account_type',
             'currency',
-            'opening_balance',
-            'current_balance',
+            'opening_balance'
         ]
+        read_only_fields = ['user', 'current_balance']
+        extra_kwargs = {
+            'user': {'read_only': True }
+        }
+
+    def create(self, validated_data):
+        validated_data['user'] = self.context['request'].user
+        return Account.objects.create(**validated_data)
 
 class TransactionSerializer(serializers.ModelSerializer):
     class Meta:

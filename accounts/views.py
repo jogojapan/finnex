@@ -8,9 +8,12 @@ class AccountViewSet(viewsets.ModelViewSet):
 
 class CreateAccountView(generics.CreateAPIView):
     queryset = Account.objects.all()
-    serializer_class = AccountSerializer
+    serializer_class   = AccountSerializer
 
     def perform_create(self, serializer):
+        print('perform_create')
+        print(self.request.user)
+        print('continue')
         serializer.save(user=self.request.user)
 
 class TransactionViewSet(viewsets.ModelViewSet):

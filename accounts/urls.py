@@ -9,5 +9,5 @@ router.register(r'recurring-transactions', RecurringTransactionViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('api/accounts', CreateAccountView.as_view(), name='create_account'),
+    path('api/accounts/', CreateAccountView.as_view(), name='create_account'),
 ]
