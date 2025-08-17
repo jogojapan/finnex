@@ -55,7 +55,7 @@ graph TD
 1. Create and Activate a Virtual Environment:
 
     ``` bash
-    python -m venv myenv
+    python -m venv finnexenv
     source finnexenv/bin/activate  # On Windows use ```myenv\Scripts\activate```
     ```
     
