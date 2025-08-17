@@ -63,7 +63,7 @@ graph TD
 1. Install Python Dependencies:
 
     ``` bash
-    bash pip install -r requirements.txt
+    pip install -r requirements.txt
     ```
 1. Create a .env File:
 
